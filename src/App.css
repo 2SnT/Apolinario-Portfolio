@@ -1,0 +1,53 @@
+body {
+   background-color: gray; 
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.image-container {
+    width: 80vw;
+    height: 90vh;
+    background-image: url('/src/assets/ME.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.navbar {
+    background-color: white;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    color: black;
+
+}
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.navbar-links:hover {
+    color: gray;
+}
+
+.hero-content {
+    margin: 45px 850px 290px 80px;
+    color: white;
+}
+
+.hero-content p {
+    margin-top: 50px;
+}
