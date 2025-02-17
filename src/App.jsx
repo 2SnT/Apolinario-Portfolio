@@ -1,8 +1,18 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router';
 import './App.css'
+import Hero from './components/Hero'
 
 function App() {
-  const [buttonText, setButtonText] = useState("More.");
+
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Hero/>}/>
+      </Routes>
+    </div>
+  );
+  /* const [buttonText, setButtonText] = useState("More.");
 
   const changeButtonText = () => {
     setButtonText("To be continue...");
@@ -61,7 +71,7 @@ function App() {
         <p>&copy; 2025 My Portfolio. All rights reserved.</p>
       </footer>
     </>
-  )
+  ) */
 }
 
 export default App
