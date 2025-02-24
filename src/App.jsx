@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import { Route, Routes } from 'react-router';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import Hero from './components/Hero'
+import AboutMe from './pages/AboutMe'
 
-function App() {
+const App = () => {
 
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Hero/>}/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/about" element={<AboutMe />} />
+        </Routes>
     </div>
   );
   /* const [buttonText, setButtonText] = useState("More.");
