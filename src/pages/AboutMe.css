@@ -165,16 +165,19 @@
 .contact-section {
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
 .contact-text {
     font-size: 1.2rem;
     color: #ddd;
     margin-bottom: 20px;
+    padding: 0 15px;
 }
 
 .contact-info {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     font-size: 1.1rem;
@@ -213,4 +216,11 @@
 .contact-button:hover {
     background-color: #CC566E;
     transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -21,7 +21,7 @@
 }
 
 .logoImage {
-    width: 7rem;
+    width: 4rem;
 }
 
 @media (min-width: 640px) {
@@ -51,6 +51,7 @@
     background: #FF758F;
     color: #fff;
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 .active-link {
