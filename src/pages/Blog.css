@@ -1,0 +1,39 @@
+.blog-intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px; /* 100px top to avoid overlapping with fixed NavBar */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .blog-intro-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        gap: 4rem;
+    }
+}
+
+.blog-intro-container .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.blog-intro-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ddd;
+    max-width: 600px;
+}
+
+.blog-button {
+    margin-top: 2rem;
+}

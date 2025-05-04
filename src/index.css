@@ -7,8 +7,14 @@
     font-family: "Montserrat", serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
+
 body {
     background: black;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;   
 }
 
 h1, h2, h3, p, a {

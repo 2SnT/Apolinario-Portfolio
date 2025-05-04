@@ -23,16 +23,22 @@ const Navbar = () => {
     return (
         <nav className={color ? "navbar navbar-bg" :
             "navbar"}>
-            <div className="navbar-left">
+            {/* <div className="navbar-left">
+                <img className="logoImage" src={myLogo} alt="Logo" />
+                <h1>Portfolio</h1> */}
+                {/* <h1><NavLink to="/">Portfolio</NavLink></h1> */}
+            {/* </div> */}
+            
+            <a href="/" className="navbar-left">
                 <img className="logoImage" src={myLogo} alt="Logo" />
                 <h1>Portfolio</h1>
-                {/* <h1><NavLink to="/">Portfolio</NavLink></h1> */}
-            </div>
+            </a>
 
             <ul className={click ? "navbar-links active" : "navbar-links"}>
                 <li><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>
                 <li><NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>About</NavLink></li>
                 <li><NavLink to="/projects" className={({ isActive }) => isActive ? "active-link" : ""}>Projects</NavLink></li>
+                <li><NavLink to="/blog" className={({ isActive }) => isActive ? "active-link" : ""}>Blog</NavLink></li>
                 <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active-link" : ""}>Contact</NavLink></li>
             </ul>
 

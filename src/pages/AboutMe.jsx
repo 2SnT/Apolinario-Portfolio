@@ -1,11 +1,21 @@
-import { FaCode, FaBookOpen, FaHeart, FaEnvelope, FaPhone, FaCoffee, FaPlane, FaGamepad } from "react-icons/fa"
-
+import { FaCode, FaBookOpen, FaHeart, FaCoffee, FaPlane, FaGamepad } from "react-icons/fa"
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiCanva, SiAdobephotoshop, SiAdobeillustrator, SiAdobelightroom } from "react-icons/si";
+import { motion } from "framer-motion"
 import "./AboutMe.css"
 import Navbar from "../components/NavBar"
 import myPhoto from "../assets/myPhoto.jpg"
 
 const AboutMe = () => {
-    const skills = ["HTML", "CSS", "JavaScript", "React"]
+    const skills = [
+        { name: "HTML", icon: <SiHtml5 /> },
+        { name: "CSS", icon: <SiCss3 /> },
+        { name: "JavaScript", icon: <SiJavascript /> },
+        { name: "React", icon: <SiReact /> },
+        { name: "Canva", icon: <SiCanva /> },
+        { name: "Photoshop", icon: <SiAdobephotoshop /> },
+        { name: "Illustrator", icon: <SiAdobeillustrator /> },
+        { name: "Lightroom", icon: <SiAdobelightroom /> },
+    ];
 
     return (
 
@@ -17,16 +27,34 @@ const AboutMe = () => {
                 <section className="section">
                     <h1 className="title">About Me</h1>
                     <div className="intro-container">
-                        <div className="photo-container">
+                        {/* <div className="photo-container">
                             <img className='profile-photo' src={myPhoto} alt="My Professional Photo" />
-                        </div>
+                        </div> */}
+                        <motion.div
+                            className="photo-container"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8, ease: 'easeOut' }}
+                        >
+                            <img className="profile-photo" src={myPhoto} alt="My Professional Photo" />
+                        </motion.div>
 
                         <div className="intro-text-container">
-                            <p>
+                            {/* <p>
                                 Hello! I am Shayne Ebol Apolinario, a passionate web developer and designer in the making.
                                 Currently, I'm a student exploring the connection between design and technology,
                                 striving to create beautiful and easy-to-use digital experiences.
-                            </p>
+                            </p> */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: 'easeOut' }}
+                            >
+                                <p>Hello! I am Shayne Ebol Apolinario, a passionate web developer and designer in the making.
+                                    Currently, I'm a student exploring the connection between design and technology,
+                                    striving to create beautiful and easy-to-use digital experiences.</p>
+                            </motion.div>
+
                         </div>
                     </div>
                 </section>
@@ -41,7 +69,7 @@ const AboutMe = () => {
                         <div className="skills-list">
                             {skills.map((skill, index) => (
                                 <span key={index} className="skill-item">
-                                    {skill}
+                                    {skill.icon} {skill.name}
                                 </span>
                             ))}
                         </div>
@@ -109,19 +137,19 @@ const AboutMe = () => {
                 </section>
 
                 {/* Contact Section */}
-                <section className="section contact-section">
+                {/* <section className="section contact-section">
                     <h2 className="section-title">Let's Connect!</h2>
                     <p className="contact-text">
                         I'm always happy to connect with developers, clients, or anyone interested in web development. Feel free to reach out!
-                    </p>
+                    </p> */}
 
-                    {/* Displayed Contact Info (Static) */}
-                    <div className="contact-info">
+                {/* Displayed Contact Info (Static) */}
+                {/* <div className="contact-info">
                         <p><FaEnvelope /> shayneapolinario35@gmail.com</p>
                         <p><FaPhone /> 09972988300</p>
-                    </div>
+                    </div> */}
 
-                    {/* Clickable Buttons (CTA)
+                {/* Clickable Buttons (CTA)
                     <div className="contact-buttons">
                         <button className="contact-button" onClick={() => window.open("mailto:shayneapolinario35@gmail.com", "_self")}>
                             <FaEnvelope /> Email Me
@@ -130,7 +158,7 @@ const AboutMe = () => {
                             <FaPhone /> Call Me
                         </button>
                     </div> */}
-                </section>
+                {/* </section> */}
             </div>
         </div>
     )
