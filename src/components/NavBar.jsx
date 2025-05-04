@@ -23,12 +23,6 @@ const Navbar = () => {
     return (
         <nav className={color ? "navbar navbar-bg" :
             "navbar"}>
-            {/* <div className="navbar-left">
-                <img className="logoImage" src={myLogo} alt="Logo" />
-                <h1>Portfolio</h1> */}
-                {/* <h1><NavLink to="/">Portfolio</NavLink></h1> */}
-            {/* </div> */}
-            
             <a href="/" className="navbar-left">
                 <img className="logoImage" src={myLogo} alt="Logo" />
                 <h1>Portfolio</h1>
