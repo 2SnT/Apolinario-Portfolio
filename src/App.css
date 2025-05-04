@@ -37,20 +37,38 @@
 }
 
 .hero .hero-content h2 {
-    font-size: 4rem;
+    font-size: 4.2rem;
     padding: 0.6rem 0 0;
     text-transform: uppercase;
-    
+    position: relative;
+}
+
+/* Glowing effect for name */
+.glowing-text {
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px #ff758f, 0 0 20px #ff758f, 0 0 30px #ff758f, 0 0 40px #ff758f, 0 0 50px #ff758f, 0 0 75px #ff758f, 0 0 100px #ff758f;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff758f, 0 0 30px #ff758f, 0 0 40px #ff758f, 0 0 50px #ff758f, 0 0 75px #ff758f, 0 0 100px #ff758f, 0 0 150px #ff758f;
+    }
 }
 
 .hero .hero-content h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 400;
     padding: 0 0 1.5rem;
 }
 
 .hero .hero-content p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 200;
     padding: 0.6rem 0 3rem  1.5rem;
 }
@@ -63,12 +81,10 @@
     .hero .hero-content h2 {
         font-size: 3rem;
         text-transform: uppercase;
-        
     }
     
     .hero .hero-content h3 {
         font-size: 1.4rem;
-
     }
     
     .hero .hero-content p {
@@ -76,84 +92,26 @@
     }
 }
 
-.logoImage {
-    animation: rotateLogo 3s infinite linear;
+.typing {
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0.6rem 0 3rem 1.5rem;
+    white-space: pre-line;
 }
 
-@keyframes rotateLogo {
-    from {
-        transform: rotate(0deg);
+.cursor {
+    display: inline-block;
+    width: 1px;
+    background-color: #fff;
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
     }
-    to {
-        transform: rotate(360deg);
+    25%, 75% {
+        opacity: 0;
     }
 }
-
-/* Hero CSS */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*body {
-   background-color: gray; 
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-}
-
-.image-container {
-    width: 80vw;
-    height: 90vh;
-    background-image: url('/src/assets/ME.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-.navbar {
-    background-color: black;
-    position: fixed;
-    padding: 15px;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    color: black;
-
-}
-.navbar-links {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    padding-left: 10px;
-}
-
-.navbar-links:hover {
-    color: gray;
-}
-
-.hero-content {
-    margin: 45px 850px 290px 80px;
-    color: white;
-}
-
-.hero-content p {
-    margin-top: 50px;
-}*/
