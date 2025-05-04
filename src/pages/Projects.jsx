@@ -41,8 +41,8 @@ import cert26 from "../assets/certificates/cert26.png"
 import cert27 from "../assets/certificates/cert27.png"
 import cert28 from "../assets/certificates/cert28.png"
 import cert29 from "../assets/certificates/cert29.png"
-// import cert30 from "../assets/certificates/sample.png"
-
+import cert30 from "../assets/certificates/cert30.png"
+import cert31 from "../assets/certificates/cert31.png"
 
 // Graphics
 import digiCol from "../assets/graphics/DigitalCollage.png"
@@ -65,9 +65,6 @@ import PhotoSpace from "../assets/graphics/Space.jpg"
 import PhotoThird from "../assets/graphics/Third.jpg"
 import PhotoViewpoint from "../assets/graphics/Viewpoint.jpg"
 
-// import myPhoto from "../assets/myPhoto.jpg";
-// import myImage from "/src/assets/ME.jpg";
-
 
 const Projects = () => {
     const [activeSection, setActiveSection] = useState("Experience");
@@ -84,7 +81,7 @@ const Projects = () => {
                         //     title: "Schedlr",
                         //     description: "Schedlr is an effective scheduling solution.",
                         //     role: "System Analyst",
-                        //     duration: "Jan 2022 - Present"
+                        //     duration: "Jan 2023 - April 2023"
                         // },
                         {
                             image: portal,
@@ -343,12 +340,18 @@ const Projects = () => {
                             src: cert29,
                             hours: "10 hours"
                         },
-                        // {
-                        //     title: "Full Stack Development",
-                        //     href: "htb",
-                        //     src: cert30,
-                        //     hours: "12 hours"
-                        // },
+                        {
+                            title: "Full Stack Java Development",
+                            href: "https://simpli-web.app.link/e/IOCkz17u6Sb",
+                            src: cert30,
+                            hours: "12 hours"
+                        },
+                        {
+                            title: "Introduction to Computer-Networking",
+                            href: "https://simpli-web.app.link/e/2HTcNlkv6Sb",
+                            src: cert31,
+                            hours: "6 hours"
+                        },
                     ].map((cert, index) => (
                         <div className="certificate-wrapper" key={index}>
   <a href={cert.href} target="_blank" rel="noreferrer">
