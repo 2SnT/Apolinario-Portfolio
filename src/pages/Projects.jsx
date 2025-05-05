@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaLaptopCode, FaCalendarWeek, FaCertificate, FaImages } from "react-icons/fa";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Navbar from "../components/NavBar";
@@ -6,6 +7,7 @@ import "./Projects.css";
 
 // Development Experience
 import portal from "../assets/projects/EEPortal.png";
+import schedlr from "../assets/projects/Schedlr.png";
 
 // Weekly Projects
 import scical from "../assets/projects/ScientificCalculator.png";
@@ -71,31 +73,32 @@ const Projects = () => {
 
     const sections = {
         Experience: {
+            icon: <FaLaptopCode />,
             label: "Development Experience",
             title: "Development Experience",
             content: (
                 <div className="experience-cards-container">
                     {[
-                        // {
-                        //     image: portal,
-                        //     title: "Schedlr",
-                        //     description: "Schedlr is an effective scheduling solution.",
-                        //     role: "System Analyst",
-                        //     duration: "Jan 2023 - April 2023"
-                        // },
+                        {
+                            image: schedlr,
+                            title: "Schedlr",
+                            description: "Schedlr is an effective scheduling solution.",
+                            role: "System Analyst",
+                            duration: "Jan 2023 - April 2023"
+                        },
                         {
                             image: portal,
                             title: "Chronologix - EE Portal",
                             description: "Chronologix created the Environmental Engineering Portal.",
                             role: "System Analyst",
-                            duration: "Jan 2022 - Present"
+                            duration: "Jan 2024 - Present"
                         },
                         {
                             image: portal,
                             title: "SupplyEase",
                             description: "SupplyEase is an intuitive e-commerce platform.",
                             role: "System Analyst and Front End",
-                            duration: "Jan 2022 - Present"
+                            duration: "Jan 2024 - Present"
                         }
                     ].map((exp, index) => (
                         <motion.div
@@ -119,6 +122,7 @@ const Projects = () => {
             )
         },
         WeeklyProjects: {
+            icon: <FaCalendarWeek />,
             label: "Weekly Projects",
             title: "Weekly Projects",
             content: (
@@ -142,13 +146,14 @@ const Projects = () => {
                     <div className="card">
                         <img src={pokedex} alt="Pokedex" />
                         <h3>Pokedex</h3>
-                        <p>A </p>
+                        <p>An interactive Pokédex showcasing Pokémon stats, types, and abilities with real-time data and clean visuals.</p>
+
                         <div className="card-links">
-                            <a href="https://github.com/2SnT/scientific-calculator" target="_blank" rel="noreferrer">
+                            <a href="https://github.com/2SnT/pokedex" target="_blank" rel="noreferrer">
                                 <FaGithub size={20} style={{ marginRight: '8px' }} />
                                 GitHub
                             </a>
-                            <a href="https://ali-apolinario-sci-cal.netlify.app/" target="_blank" rel="noreferrer">
+                            <a href="https://pokedex-ali-apolinario.netlify.app" target="_blank" rel="noreferrer">
                                 <FaExternalLinkAlt size={20} style={{ marginRight: '8px' }} />
                                 Live Demo
                             </a>
@@ -158,11 +163,10 @@ const Projects = () => {
             )
         },
         Certificates: {
+            icon: <FaCertificate />,
             label: "Certificates",
             title: "Certificates",
             content: (
-
-
                 <div className="certificates-grid">
                     {/* Certificate Item */}
                     {[
@@ -354,41 +358,54 @@ const Projects = () => {
                         },
                     ].map((cert, index) => (
                         <div className="certificate-wrapper" key={index}>
-  <a href={cert.href} target="_blank" rel="noreferrer">
-    <img
-      src={cert.src}
-      alt={cert.title}
-      className="certificate-image"
-    />
-    <div className="certificate-info">
-      <p className="certificate-title">{cert.title}</p>
-      <p className="certificate-hours">{cert.hours}</p>
-    </div>
-    <div className="preview">
-      <img src={cert.src} alt={`Preview of ${cert.title}`} />
-      <div className="certificate-info">
-        <p className="certificate-title">{cert.title}</p>
-        <p className="certificate-hours">{cert.hours}</p>
-      </div>
-    </div>
-  </a>
-</div>
-                      ))}
+                            <a href={cert.href} target="_blank" rel="noreferrer">
+                                <img
+                                    src={cert.src}
+                                    alt={cert.title}
+                                    className="certificate-image"
+                                />
+                                <div className="certificate-info">
+                                    <p className="certificate-title">{cert.title}</p>
+                                    <p className="certificate-hours">{cert.hours}</p>
+                                </div>
+                                <div className="preview">
+                                    <img src={cert.src} alt={`Preview of ${cert.title}`} />
+                                    <div className="certificate-info">
+                                        <p className="certificate-title">{cert.title}</p>
+                                        <p className="certificate-hours">{cert.hours}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    ))}
                 </div>
 
             )
-        }
-        ,
+        },
         Graphics: {
+            icon: <FaImages />,
             label: "Graphics",
             title: "Graphics",
             content: (
-                <div className="image-grid">
-                    {[digiCol, adPost, sportPost, typoArt, logoF, logoM, logoP, logoS, apron, tshirt, sshirt, pshirt,
-                        PhotoAction, PhotoFraming, PhotoGolden, PhotoOdds, PhotoSpace, PhotoThird, PhotoViewpoint].map((img, index) => (
-                            <img src={img} alt={`Graphic ${index + 1}`} key={index} />
+                <motion.div
+                    className="image-grid"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                    {[digiCol, sportPost, typoArt, adPost, logoP, apron, tshirt, sshirt, pshirt,
+                        PhotoAction, PhotoFraming, PhotoSpace, PhotoGolden, PhotoOdds, PhotoThird, PhotoViewpoint].map((img, index) => (
+                            <motion.img
+                                src={img}
+                                alt={`Graphic ${index + 1}`}
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.05 }}
+                            />
                         ))}
-                </div>
+                </motion.div>
             )
         }
     };
@@ -412,7 +429,7 @@ const Projects = () => {
                                 className={activeSection === key ? "active" : ""}
                                 onClick={() => setActiveSection(key)}
                             >
-                                {section.label}
+                                {section.icon} <span className="btn-label">{section.label}</span>
                             </button>
                         ))}
                     </div>

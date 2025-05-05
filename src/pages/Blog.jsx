@@ -1,5 +1,4 @@
 import Navbar from "../components/NavBar"
-import { Link } from "react-router-dom"
 import "./Blog.css"
 
 const Blog = () => {
@@ -10,13 +9,19 @@ const Blog = () => {
                 <div className="intro-text-container">
                     <h1 className="title">Welcome to My Blog</h1>
                     <p>
-                        Step into my world of creativity, code, and curiosity. Here, I share my thoughts on front-end development, personal projects, creative tips, and life experiences that shape my journey.
+                        <p>
+                            Welcome to my Industry Visit blog! Here, I document the experiences, insights, and memorable moments from our educational tour. 
+                            Dive into the highlights, reflections, and learnings that shaped this exciting journey.
+                        </p>
+
                     </p>
-                    <Link to="/blog/posts">
-                        <button className="contact-button blog-button">
-                            Visit my Blog
-                        </button>
-                    </Link>
+                    <div className="buttons-wrapper">
+                        <a href="https://industry-visit.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <button className="contact-button blog-button">
+                                Visit my Blog
+                            </button>
+                        </a>
+                    </div>
                 </div>
                 {/* <div className="photo-container">
                     <img

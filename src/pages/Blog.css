@@ -14,7 +14,7 @@
 @media (min-width: 768px) {
     .blog-intro-container {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center; /* Align text and button vertically */
         justify-content: center;
         text-align: left;
         gap: 4rem;
@@ -32,8 +32,44 @@
     line-height: 1.6;
     color: #ddd;
     max-width: 600px;
+    margin: 0 auto;
 }
 
-.blog-button {
+/* Center the button container */
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure the wrapper takes up the full width */
+}
+
+/* Styling the button itself */
+.blog-button, .contact-button {
+    background-color: #FF758F;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     margin-top: 2rem;
+    border: none;
+    text-transform: uppercase; /* Make text look more dynamic */
+    box-shadow: 0 0 15px rgba(255, 118, 143, 0.8); /* Glowing effect */
+}
+
+.blog-button:hover, .contact-button:hover {
+    background-color: #CC566E;
+    box-shadow: 0 0 30px rgba(255, 118, 143, 1); /* Stronger glow on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+@media (max-width: 767px) {
+    .blog-button, .contact-button {
+        width: 100%; /* Full-width on mobile for better visibility */
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
 }
