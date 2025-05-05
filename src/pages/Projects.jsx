@@ -7,7 +7,8 @@ import "./Projects.css";
 
 // Development Experience
 import portal from "../assets/projects/EEPortal.png";
-import schedlr from "../assets/projects/Schedlr.png";
+import schedlr from "../assets/projects/Schedlr.jpg";
+import supplyease from "../assets/projects/SupplyEase.jpg";
 
 // Weekly Projects
 import scical from "../assets/projects/ScientificCalculator.png";
@@ -94,7 +95,7 @@ const Projects = () => {
                             duration: "Jan 2024 - Present"
                         },
                         {
-                            image: portal,
+                            image: supplyease,
                             title: "SupplyEase",
                             description: "SupplyEase is an intuitive e-commerce platform.",
                             role: "System Analyst and Front End",
